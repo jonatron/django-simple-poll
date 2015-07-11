@@ -16,7 +16,7 @@ else:
 
 class PublishedManager(Manager):
     def get_query_set(self):
-        return super(PublishedManager, self).get_query_set().filter(is_published=True)
+        return super(PublishedManager, self).get_queryset().filter(is_published=True)
 
 
 class Poll(models.Model):
