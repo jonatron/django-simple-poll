@@ -15,7 +15,7 @@ else:
 
 
 class PublishedManager(Manager):
-    def get_query_set(self):
+    def get_queryset(self):
         return super(PublishedManager, self).get_queryset().filter(is_published=True)
 
 
