@@ -64,7 +64,7 @@ class Item(models.Model):
 class Vote(models.Model):
     poll = models.ForeignKey(Poll, verbose_name=_('poll'))
     item = models.ForeignKey(Item, verbose_name=_('voted item'))
-    ip = models.IPAddressField(verbose_name=_('user\'s IP'))
+    ip = models.GenericIPAddressField(verbose_name=_('user\'s IP'))
     user = models.ForeignKey(User, blank=True, null=True,
                              verbose_name=_('user'))
     datetime = models.DateTimeField(auto_now_add=True)
